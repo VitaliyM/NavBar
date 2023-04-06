@@ -10,11 +10,16 @@ const NavbarBlock = () => {
                 <div className='logoText'>Burger menu</div>
             </div>
             <div className='navBarListBlock'>
-                <a href="http://" className='navBarList'>Home</a>
+                <a href="http:" className='navBarList'>Home</a>
                 <a href="http://" className='navBarList'>News</a>
                 <a href="http://" className='navBarList'>Product</a>
                 <a href="http://" className='navBarList'>About Us</a>
                 <a href="http://" className='navBarList'>Contacts</a>
+            </div>
+            <div className='navBarMobileBtn'>
+                <div className='btnLine btnLine1'></div>
+                <div className='btnLine btnLine2'></div>
+                <div className='btnLine btnLine3'></div>
             </div>
         </div>
     )
