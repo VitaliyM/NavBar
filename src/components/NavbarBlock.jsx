@@ -1,19 +1,23 @@
 import React from 'react';
 import './navbarBlock.css';
+import Logo from './../images/burger.png';
 
 const NavbarBlock = () => {
-  return (
-    <div className='navbarBlock'>
-        <div className='navbarLogo'>Logo</div>
-        <div className='navBarList'>
-            <div>Home</div>
-            <div>News</div>
-            <div>Product</div>
-            <div>About Us</div>
-            <div>Contacts</div>
+    return (
+        <div className='navbarBlock'>
+            <div className='logoBlock'>
+                <img src={Logo} alt="Burger" className='navbarLogo' />
+                <div className='logoText'>Burger menu</div>
+            </div>
+            <div className='navBarListBlock'>
+                <a href="http://" className='navBarList'>Home</a>
+                <a href="http://" className='navBarList'>News</a>
+                <a href="http://" className='navBarList'>Product</a>
+                <a href="http://" className='navBarList'>About Us</a>
+                <a href="http://" className='navBarList'>Contacts</a>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default NavbarBlock
