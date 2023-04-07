@@ -1,0 +1,5 @@
+.mobileBtnCross {
+    width: inherit;
+    height: inherit;
+    background: url(./../../images/close.svg) no-repeat center;
+}

@@ -36,6 +36,7 @@
 }
 
 .navBarList {
+    position: relative;
     text-decoration: none;
     font-family: sans-serif;
     font-size: 20px;
@@ -55,7 +56,7 @@
 }
 
 .navBarList:hover::after {
-    width: inherit;
+    width: 100%;
     left: 0;
     transition: all 0.1s linear;
 }
@@ -64,10 +65,8 @@
     width: 50px;
     height: 50px;
     display: none;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     position: absolute;
     top: 25px;
     right: 20px;
@@ -75,29 +74,7 @@
     cursor: pointer;
 }
 
-.btnLine {
-    background: #000000;
-    width: inherit;
-    height: 2px;
-}
 
-.navBarMobileBtn:hover {
-    gap: 0;
-}
-
-.navBarMobileBtn:hover .btnLine1 {
-    transform: rotateZ(45deg);
-    transition: all 0.2s linear ;
-}
-
-.navBarMobileBtn:hover .btnLine2 {
-    transform: rotateZ(-45deg);
-    transition: all 0.2s linear ;
-}
-
-.navBarMobileBtn:hover .btnLine3 {
-    display: none;
-}
 
 
 @media screen and (max-width: 768px) {

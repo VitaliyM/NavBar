@@ -1,27 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbarBlock.css';
 import Logo from './../images/burger.png';
+import MobileButtonLine from './mobileMenuButton/MobileButtonLine';
+import MobileButtonCross from './mobileMenuButton/MobileButtonCross';
 
 const NavbarBlock = () => {
+
+    const [showMenu, setShowMenu] = useState(true);
+
     return (
-        <div className='navbarBlock'>
+        <header className='navbarBlock'>
             <div className='logoBlock'>
                 <img src={Logo} alt="Burger" className='navbarLogo' />
                 <div className='logoText'>Burger menu</div>
             </div>
             <div className='navBarListBlock'>
-                <a href="http:" className='navBarList'>Home</a>
-                <a href="http://" className='navBarList'>News</a>
-                <a href="http://" className='navBarList'>Product</a>
-                <a href="http://" className='navBarList'>About Us</a>
-                <a href="http://" className='navBarList'>Contacts</a>
+                <a href="##" className='navBarList'>Home</a>
+                <a href="##" className='navBarList'>News</a>
+                <a href="##" className='navBarList'>Product</a>
+                <a href="##" className='navBarList'>About Us</a>
+                <a href="##" className='navBarList'>Contacts</a>
             </div>
-            <div className='navBarMobileBtn'>
-                <div className='btnLine btnLine1'></div>
-                <div className='btnLine btnLine2'></div>
-                <div className='btnLine btnLine3'></div>
+            <div className='navBarMobileBtn' onClick={() => { setShowMenu(!showMenu) }}>
+                {showMenu ? <MobileButtonLine /> : <MobileButtonCross />}
             </div>
-        </div>
+        </header>
     )
 }
 
