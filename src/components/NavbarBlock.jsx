@@ -14,13 +14,13 @@ const NavbarBlock = () => {
                 <img src={Logo} alt="Burger" className='navbarLogo' />
                 <div className='logoText'>Burger menu</div>
             </div>
-            <div className='navBarListBlock'>
+            <nav className={showMenu ? 'navBarListBlock' : 'navBarListBlock navBarListBlockActive'}>
                 <a href="##" className='navBarList'>Home</a>
                 <a href="##" className='navBarList'>News</a>
                 <a href="##" className='navBarList'>Product</a>
                 <a href="##" className='navBarList'>About Us</a>
                 <a href="##" className='navBarList'>Contacts</a>
-            </div>
+            </nav>
             <div className='navBarMobileBtn' onClick={() => { setShowMenu(!showMenu) }}>
                 {showMenu ? <MobileButtonLine /> : <MobileButtonCross />}
             </div>

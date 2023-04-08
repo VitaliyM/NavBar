@@ -79,7 +79,31 @@
 
 @media screen and (max-width: 768px) {
     .navBarListBlock {
-        display: none;
+        background: lightgrey;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        position: absolute;
+        top: -100%;
+        left: -0;
+        transition: top 0.2s linear;
+    }
+
+    .navBarListBlockActive {
+        top: 0;
+        transition: top 0.2s linear;
+    }
+
+    .navBarList {
+        font-size: 30px;
+    }
+
+    .navBarList::after {
+        top: 30px;
     }
 
     .navBarMobileBtn {
