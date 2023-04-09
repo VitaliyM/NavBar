@@ -8,6 +8,8 @@ const NavbarBlock = () => {
 
     const [showMenu, setShowMenu] = useState(true);
 
+    const toggleButtonState = () => setShowMenu(!showMenu);
+
     return (
         <header className='navbarBlock'>
             <div className='logoBlock'>
@@ -21,7 +23,7 @@ const NavbarBlock = () => {
                 <a href="##" className='navBarList'>About Us</a>
                 <a href="##" className='navBarList'>Contacts</a>
             </nav>
-            <div className='navBarMobileBtn' onClick={() => { setShowMenu(!showMenu) }}>
+            <div className='navBarMobileBtn' onClick={toggleButtonState}>
                 {showMenu ? <MobileButtonLine /> : <MobileButtonCross />}
             </div>
         </header>
