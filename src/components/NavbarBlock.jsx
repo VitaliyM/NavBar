@@ -11,10 +11,6 @@ const NavbarBlock = () => {
     const showMobileMenu = useSelector(state => state.navbar.openMenu);
     const dispatch = useDispatch();
 
-    // const [showMenu, setShowMenu] = useState(true);
-
-    // const toggleButtonState = () => setShowMenu(!showMenu);
-
     return (
         <header className='navbarBlock'>
             <div className='logoBlock'>
@@ -28,7 +24,7 @@ const NavbarBlock = () => {
                 <a href="##" className='navBarList'>About Us</a>
                 <a href="##" className='navBarList'>Contacts</a>
             </nav>
-            <div className='navBarMobileBtn' onClick={ () => dispatch(setOpenMenu()) }>
+            <div className='navBarMobileBtn' onClick={() => dispatch(setOpenMenu())}>
                 {showMobileMenu ? <MobileButtonLine /> : <MobileButtonCross />}
             </div>
         </header>
